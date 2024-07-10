@@ -74,7 +74,7 @@ const Intro = () => {
                     </div>
 
                     {/* socials */}
-                    <div className='col-span-1 row-span-2 border-2 border-gray-500 rounded-lg'>
+                    <div className='col-span-1 row-span-2 rounded-lg'>
                         <Socials />
                     </div>
                 </div>
