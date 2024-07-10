@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         bebas: "Bebas Neue",
-        text: "Source Sans 3",
+        text: "Lora",
       },
       colors: {
         orange: "#F1720C",
