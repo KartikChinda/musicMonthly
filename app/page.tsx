@@ -1,17 +1,17 @@
 import Hero from "@/components/Hero";
-import NewHero from "@/components/NewHero"
+import Intro from "@/components/Intro";
+import Animator from "@/components/Animator";
+
 
 export default function Home() {
   return (
     <main>
-      {/* <NewHero /> */}
       <div>
         Easter egg: Hi
       </div>
       <Hero />
-      <div className="h-[100vh]">
-
-      </div>
+      <Animator />
+      <Intro />
     </main>
   );
 }
