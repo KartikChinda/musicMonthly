@@ -12,6 +12,10 @@ const config: Config = {
         bebas: "Bebas Neue",
         text: "Source Sans 3",
       },
+      colors: {
+        orange: "#F1720C",
+        brown: "#1E1305",
+      },
 
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
