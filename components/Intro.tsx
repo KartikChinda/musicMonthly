@@ -41,12 +41,12 @@ const Intro = () => {
     }, []);
 
     return (
-        <section>
-            <div className='h-[40vh]'>
+        <section className='flex flex-col justify-center items-center'>
+            <div className='h-[40vh] '>
 
             </div>
             <motion.div
-                className='mt-40 mb-10 mx-4 p-4 rounded-xl bg-[#EDE0D0] flex flex-col justify-center items-center'
+                className='mt-40 mb-10 mx-4 p-4 w-[90%] rounded-xl bg-[#EDE0D0] flex flex-col justify-center items-center'
                 ref={ref}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
@@ -57,14 +57,14 @@ const Intro = () => {
                     Music Monthly
                 </div>
                 {/* container */}
-                <div className='grid grid-cols-10 grid-rows-5 border-2 mt-28 w-[80%] border-black h-[80vh] gap-4'>
+                <div className='grid grid-cols-10 grid-rows-5  mt-28 w-[80%] h-[90vh] gap-4'>
                     {/* main content */}
-                    <div className='col-span-6 row-span-3 border-2 border-black rounded-lg'>
+                    <div className='col-span-7 row-span-3 border-2 border-black rounded-lg'>
                         <Hero />
                     </div>
 
                     {/* photos */}
-                    <div className='col-span-4 row-span-3 border-2 border-yellow-950 rounded-lg'>
+                    <div className='col-span-3 row-span-3 rounded-lg'>
                         <Pictures />
                     </div>
 
