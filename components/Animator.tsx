@@ -45,7 +45,7 @@ const Animator = () => {
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }} // Opacity when component is visible
                 transition={{ duration: 1 }} // Duration of the fade animation
             >
-                <h1 className='text-[#3C2A21] text-4xl md:text-7xl 2xl:text-9xl font-bebas'>I got you, boo. </h1>
+                <h1 className='text-[#3C2A21] text-4xl md:text-7xl 2xl:text-9xl font-bebas group'>I got <span className='text-orange group-hover:text-[160px] duration-150'>you</span>, boo. </h1>
             </motion.div>
 
         </div>
