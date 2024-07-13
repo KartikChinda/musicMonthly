@@ -57,7 +57,7 @@ const Intro = () => {
                     Music Monthly
                 </div>
                 {/* container */}
-                <div className='grid grid-cols-10 grid-rows-5  mt-28 w-[80%] h-[100vh] gap-4'>
+                <div className='grid grid-cols-10 grid-rows-5  mt-28 w-[80%] h-[105vh] gap-4'>
                     {/* main content */}
                     <div className='col-span-7 row-span-3 border-2 border-black rounded-lg'>
                         <Hero />
