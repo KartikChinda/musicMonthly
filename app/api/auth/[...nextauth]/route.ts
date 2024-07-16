@@ -1,34 +1,58 @@
-import NextAuth from 'next-auth';
-import SpotifyProvider from 'next-auth/providers/spotify';
-import { PrismaAdapter } from '@next-auth/prisma-adapter';
-import prisma from '../../../../lib/prisma';
-import { NextAuthOptions } from 'next-auth';
+import NextAuth from "next-auth/next";
+import { NextApiRequest, NextApiResponse } from "next";
+import Spotify from "next-auth/providers/spotify";
+import { PrismaClient } from "@prisma/client";
+import { NextAuthOptions } from "next-auth";
 
-export const authOptions: NextAuthOptions = {
+const prisma = new PrismaClient();
+
+const authOptions: NextAuthOptions = {
     providers: [
-        SpotifyProvider({
+        Spotify({
             clientId: process.env.SPOTIFY_CLIENT_ID!,
             clientSecret: process.env.SPOTIFY_CLIENT_SECRET!,
-            authorization: 'https://accounts.spotify.com/authorize?scope=user-top-read',
+            authorization: {
+                params: {
+                    scope: 'user-read-email, user-top-read',
+                },
+            },
         }),
     ],
-    adapter: PrismaAdapter(prisma),
+
     callbacks: {
         async jwt({ token, account }) {
             if (account) {
-                // Ensure TypeScript knows about the structure of account
-                token.accessToken = account.accessToken as string;
+                token.accessToken = account.access_token!;
             }
             return token;
         },
         async session({ session, token }) {
-            // Ensure TypeScript knows about the structure of token
-            session.accessToken = token?.accessToken as string;
+            session.user.accessToken = token.accessToken as string;
             return session;
+        },
+        async signIn({ user, account }) {
+            const existingUser = await prisma.user.findUnique({
+                where: { email: user.email! },
+            });
+
+            if (existingUser) {
+                await prisma.user.update({
+                    where: { email: user.email! },
+                    data: { accessToken: account?.access_token! },
+                });
+            } else {
+                await prisma.user.create({
+                    data: {
+                        name: user.name!,
+                        email: user.email!,
+                        accessToken: account?.access_token!,
+                    },
+                });
+            }
+
+            return true;
         },
     },
 };
 
-const handler = NextAuth(authOptions);
-
-export { handler as GET, handler as POST };
+export default (req: NextApiRequest, res: NextApiResponse) => NextAuth(req, res, authOptions);
