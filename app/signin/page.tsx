@@ -1,22 +1,47 @@
-import { getProviders, signIn } from "next-auth/react";
+// app/signin/page.tsx
+"use client";
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { getProviders, signIn } from 'next-auth/react'; // Import signIn function from next-auth/react
 
+const SignInPage = () => {
+    const router = useRouter();
+    const [providers, setProviders] = useState<any>(null); // Initialize providers state
 
-const SignIn = async ({ providers }: { providers: any }) => {
-    <>
-        {Object.values(providers).map((provider: any) => {
-            <div key={provider.name}>
-                <button onClick={() => signIn(provider.id)}>
-                    Sign in With Spotify.
-                </button>
-            </div>
+    useEffect(() => {
+        const fetchProviders = async () => {
+            const providersData = await getProviders(); // Fetch authentication providers
+            setProviders(providersData); // Set providers state
+        };
 
-        })}
-    </>
-}
+        fetchProviders();
+    }, []);
 
-export default SignIn;
+    const handleSignIn = async (providerId: string) => {
+        try {
+            await signIn(providerId); // Sign in with selected provider
+            router.push('/dashboard'); // Redirect to dashboard or another page after sign-in
+        } catch (error) {
+            console.error('Sign-in error:', error);
+            // Handle sign-in error (e.g., show error message)
+        }
+    };
 
-export async function getServerSideProps() {
-    const providers = await getProviders();
-    return { props: { providers } }
-}
+    if (!providers) {
+        return <p>Loading...</p>; // Render loading indicator while fetching providers
+    }
+
+    return (
+        <div>
+            {Object.values(providers).map((provider: any) => (
+                <div key={provider.id}>
+                    <button onClick={() => handleSignIn(provider.id)}>
+                        Sign in with {provider.name}
+                    </button>
+                </div>
+            ))}
+        </div>
+    );
+};
+
+export default SignInPage;

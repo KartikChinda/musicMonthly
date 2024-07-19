@@ -4,7 +4,7 @@
     height: 100%;
     /* animation: changeImage 5s cubic-bezier(0.075, 0.82, 0.165, 1) infinite; */
     animation: changeImage 2s steps(5) infinite;
-    /* transition: background-image 8s ease-out; */
+   
     border-radius: 20px;
 }
 
