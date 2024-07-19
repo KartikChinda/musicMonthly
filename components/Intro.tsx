@@ -5,9 +5,13 @@ import Socials from './gridComponents/Socials';
 import Hero from './gridComponents/Hero';
 import Pictures from './gridComponents/Pictures';
 import Features from './gridComponents/Features';
+import { signOut, useSession } from 'next-auth/react';
 
 
 const Intro = () => {
+
+    const { data: session } = useSession();
+
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef<HTMLDivElement | null>(null);
 
@@ -79,6 +83,8 @@ const Intro = () => {
                     </div>
                 </div>
 
+                {session?.user.name}
+                <button onClick={() => signOut()}>Sign out</button>
 
 
 

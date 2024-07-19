@@ -40,7 +40,7 @@ const Animator = () => {
             <div className='h-[40vh] w-full bg-black '>
             </div>
 
-            <motion.div ref={ref} className='h-[90vh] m-4 md:m-20 rounded-xl bg-[#EDE0D0] flex justify-center items-center'
+            <motion.div ref={ref} className='h-[90vh] m-4 md:m-20 rounded-xl bg-[#EDE0D0] flex justify-center items-center group'
                 initial={{ opacity: 0 }} // Initial opacity when component mounts
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }} // Opacity when component is visible
                 transition={{ duration: 1 }} // Duration of the fade animation
