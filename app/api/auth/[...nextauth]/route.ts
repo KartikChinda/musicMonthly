@@ -44,12 +44,12 @@
 
 
 import NextAuth from 'next-auth/next';
-import SpotifyProvider from 'next-auth/providers/spotify';
-import { PrismaClient } from '@prisma/client';
+// import SpotifyProvider from 'next-auth/providers/spotify';
+// import { PrismaClient } from '@prisma/client';
 import { authOptions } from '@/lib/auth';
 
-const prisma = new PrismaClient();
+// const prisma = new PrismaClient();
 
-export const handler = NextAuth(authOptions);
+export const handler = NextAuth(authOptions) as never;
 
 export { handler as GET, handler as POST }; 
