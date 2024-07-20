@@ -4,16 +4,16 @@ declare module 'next-auth' {
     interface Session {
         user: {
             accessToken?: string; // Ensure accessToken is optional
-            name?: string | null;
+            userName?: string | null;
             email?: string | null;
-            image?: string | null;
+            imageURL?: string | null;
         };
     }
 
     interface User {
         accessToken?: string; // Ensure accessToken is optional
-        name?: string | null;
+        userName?: string | null;
         email?: string | null;
-        image?: string | null;
+        imageURL?: string | null;
     }
 }

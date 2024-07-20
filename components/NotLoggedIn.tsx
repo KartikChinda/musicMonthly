@@ -4,7 +4,7 @@ import React from 'react'
 
 const NotLoggedIn = () => {
     return (
-        <main className='h-[100vh] w-full flex justify-center items-center'>
+        <div className='h-[100vh] w-full flex justify-center items-center'>
             <div className='rounded-xl w-[90vw] bg-[#EDE0D0] flex flex-col justify-center items-center p-10 text-center gap-2'>
                 <h1 className='text-[#3C2A21] text-[100px] md:text-[150px] 2xl:text-[180px] font-bebas '>Neat! </h1>
                 <div className='flex flex-col justify-center items-center gap-2 w-[95%] md:w-[90%] bg-brown rounded-xl p-4 text-[#EDE0D0] font-text group hover:p-[15px] duration-200'>
@@ -25,7 +25,7 @@ const NotLoggedIn = () => {
                 </div>
 
             </div>
-        </main>
+        </div>
     )
 }
 

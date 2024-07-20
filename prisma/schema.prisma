@@ -16,6 +16,8 @@ datasource db {
 
 model User {
   id          Int      @id @default(autoincrement())
+  userName    String?
+  imageURL    String?
   spotifyID   String   @unique
   email       String   @unique
   accessToken String?
