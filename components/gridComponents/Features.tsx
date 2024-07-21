@@ -2,7 +2,7 @@ import React from 'react'
 
 const Features = () => {
     return (
-        <div className='grid grid-cols-5 grid-rows-1  h-full w-full gap-2'>
+        <div className='grid grid-cols-5 grid-rows-1 h-full w-full gap-2'>
             <div className='col-span-1 row-span-1 border-2 bg-orange rounded-xl h-[100%] flex flex-col justify-center items-center font-text group duration-150 p-2 group'>
                 <h1 className='font-bebas text-3xl 3xl:text-5xl text-center group-hover:text-xl 3xl:group-hover:text-3xl duration-200'>Certified <br /> bops you <br />listened to.</h1>
                 <p className='text-center mt-2 text-xs  group-hover:text-sm 3xl:group-hover:text-base group-hover:font-semibold duration-200'>Get a list of bangers you could not stop from pouring through your headphones. The top songs you listened to, curated in one place.</p>
