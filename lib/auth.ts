@@ -9,7 +9,7 @@ export const authOptions: NextAuthOptions = {
         SpotifyProvider({
             clientId: process.env.SPOTIFY_CLIENT_ID!,
             clientSecret: process.env.SPOTIFY_CLIENT_SECRET!,
-            authorization: 'https://accounts.spotify.com/authorize?scope=user-read-email%20user-top-read',
+            authorization: 'https://accounts.spotify.com/authorize?scope=user-read-email%20user-top-read&response_type=code&redirect_uri=https://music-monthly.vercel.app/api/auth/callback/spotify',
         }),
     ],
     callbacks: {
