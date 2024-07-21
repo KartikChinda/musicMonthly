@@ -1,13 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
-import { useSession } from "next-auth/react";
 import Genre from "@/components/sliderComponents/Genre";
 import Hello from "@/components/sliderComponents/Hello";
 import TopSong from "@/components/sliderComponents/TopSong";
 import TopSongs from "@/components/sliderComponents/TopSongs";
 import TopArtist from "@/components/sliderComponents/TopArtist";
 import TopArtists from "@/components/sliderComponents/TopArtists";
+import Thanks from "@/components/sliderComponents/Thanks";
 
 const components = [
     <Hello />,
@@ -16,6 +16,7 @@ const components = [
     <TopArtist />,
     <TopArtists />,
     <Genre />,
+    <Thanks />,
 ];
 
 const ONE_SECOND = 10000000;

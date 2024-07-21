@@ -11,6 +11,8 @@ export const getGenre = (artists: any[]) => {
         }
     })
 
+    console.log(genreCount);
+
     let mostCommonGenre: string | null = null;
     let maxCount = 0;
 
@@ -20,6 +22,8 @@ export const getGenre = (artists: any[]) => {
             maxCount = genreCount[genre];
         }
     });
+
+    console.log("THe most common genre is: ", mostCommonGenre);
 
     return mostCommonGenre;
 }
