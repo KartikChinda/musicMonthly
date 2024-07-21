@@ -1,14 +1,20 @@
 import { PrismaClient } from "@prisma/client";
 import getTracks from "@/lib/getTracks";
 import getArtists from "@/lib/getArtists";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth";
 
 export const GET = async () => {
     const prisma = new PrismaClient();
 
-    const users = await prisma.user.findMany();
-    console.log(users);
+    const session = await getServerSession(authOptions);
 
-    const lastUser = users[users.length - 1];
+    const lastUser = session?.user!;
+
+    // const users = await prisma.user.findMany();
+    // console.log(users);
+
+    // const lastUser = users[users.length - 1];
 
     console.log("Latest user is: ", lastUser);
 
@@ -31,7 +37,7 @@ export const GET = async () => {
 
 
     } catch (error) {
-        console.log("Error fetching the data for the last user. The error is: ", error);
+        console.log("Error fetching the tracks. The error is: ", error);
 
         return new Response("Cannot fetch tracks", { status: 500 });
     }
