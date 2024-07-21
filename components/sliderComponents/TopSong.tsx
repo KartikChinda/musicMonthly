@@ -19,7 +19,7 @@ const TopSong = () => {
                 songURL: data[0].songURL,
                 title: data[0].title,
             });
-            console.log(topSong);
+
         }
 
         fetchTopSong();

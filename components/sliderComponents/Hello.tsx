@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Hello = () => {
 
     const { data: session } = useSession();
-    console.log("This is the session: ", session?.user);
+
 
     const now = new Date();
     const currentMonth = now.getMonth();
