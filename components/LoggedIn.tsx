@@ -16,18 +16,20 @@ const LoggedIn = () => {
                             Okay maybe that
                             <span className='font-bold group-hover:text-orange duration-150 group-hover:text-[18px]'> and some validation </span> about you liking what I made here. <br /></p>
                         <div className='text-lg mt-5 md:mt-11 duration-150'>
-                            Go<span className='group-hover:text-orange duration-150 group-hover:text-[22px]'> check your email </span> out.
+                            Click <span className='group-hover:text-orange duration-150 group-hover:text-[22px]'> the button </span> below.
                             <p>
-                                You would've received a fun recap of your music stats for this past month.
+                                And you'll be taken to a fun recap of your music stats for this past month.
                             </p>
-                            <p className='mt-4'>Not only this, you will receive a new wrapped <span className='group-hover:text-orange duration-150 group-hover:text-[22px]'> every month on the 1st.</span></p>
+                            <p className='mt-6 text-sm font-light'>
+                                <span className='block text-sm'>Coming soon:</span>
+                                Not only this, you will receive a new wrapped on your email <span className='group-hover:text-orange duration-150 group-hover:text-[18px]'> every month on the 1st.</span></p>
                         </div>
 
                     </div>
                     <div className='my-10 hover:my-[34px] rounded-xl bg-orange px-4 py-2 text-brown font-bebas font-black text-6xl hover:bg-brown border-2 border-orange hover:border-orange duration-150 hover:text-orange hover:text-7xl'>
 
-                        <Link href={"/"} >
-                            Go home
+                        <Link href={"/wrapped"} >
+                            Check it out
                         </Link>
 
                     </div>
