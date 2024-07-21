@@ -13,6 +13,7 @@ const page = () => {
 
     useEffect(() => {
 
+        // do we need to fix this? 
         setdisplayConfetti((prev) => !prev)
 
 
