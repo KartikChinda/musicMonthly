@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import getTracks from "@/lib/getTracks";
+import getArtists from "@/lib/getArtists";
 
 export const GET = async () => {
     const prisma = new PrismaClient();
