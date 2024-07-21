@@ -1,5 +1,4 @@
 import { NextAuthOptions } from "next-auth";
-import NextAuth from 'next-auth/next';
 import SpotifyProvider from 'next-auth/providers/spotify';
 import { PrismaClient } from '@prisma/client';
 
@@ -10,7 +9,7 @@ export const authOptions: NextAuthOptions = {
         SpotifyProvider({
             clientId: process.env.SPOTIFY_CLIENT_ID!,
             clientSecret: process.env.SPOTIFY_CLIENT_SECRET!,
-            authorization: 'https://accounts.spotify.com/authorize',
+            authorization: 'https://accounts.spotify.com/authorize?scope=user-read-email%20user-top-read',
         }),
     ],
     callbacks: {

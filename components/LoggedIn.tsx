@@ -3,6 +3,7 @@ import { signIn } from 'next-auth/react'
 import React from 'react'
 import Link from 'next/link';
 
+
 const LoggedIn = () => {
     return (
         <div className='h-[100vh] w-full flex justify-center items-center'>
@@ -28,7 +29,6 @@ const LoggedIn = () => {
                         <Link href={"/"} >
                             Go home
                         </Link>
-
 
                     </div>
 

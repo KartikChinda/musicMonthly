@@ -19,7 +19,7 @@ const Hero = () => {
                 <div className='mt-8 rounded-xl bg-orange px-4 py-2 text-brown font-bebas font-black text-2xl hover:bg-brown border-2 border-orange hover:border-orange duration-150 hover:text-orange hover:text-[26px]'>
                     You're still here? </div>
             }
-            {/* <button onClick={() => { signOut() }}>SignoutButton</button> */}
+            <button onClick={() => { signOut() }}>SignoutButton</button>
 
         </div>
     )
