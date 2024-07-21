@@ -13,8 +13,11 @@ const page = () => {
 
     useEffect(() => {
 
-        // do we need to fix this? 
-        setdisplayConfetti((prev) => !prev)
+        // do we need to fix this?
+        if (session?.user) {
+            setdisplayConfetti(true)
+
+        }
 
 
     }, [session?.user])
