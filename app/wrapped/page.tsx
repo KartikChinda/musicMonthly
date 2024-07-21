@@ -18,7 +18,7 @@ const components = [
     <Genre />,
 ];
 
-const ONE_SECOND = 10000;
+const ONE_SECOND = 10000000;
 const AUTO_DELAY = ONE_SECOND * 10;
 const DRAG_BUFFER = 50;
 
@@ -133,8 +133,8 @@ const Dots = ({ imgIndex, setImgIndex }: { imgIndex: any, setImgIndex: any }) =>
 const GradientEdges = () => {
     return (
         <>
-            <div className="pointer-events-none absolute bottom-0 left-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-r from-neutral-950/50 to-neutral-950/0" />
-            <div className="pointer-events-none absolute bottom-0 right-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-l from-neutral-950/50 to-neutral-950/0" />
+            <div className="pointer-events-none absolute bottom-0 left-0 top-0 w-[10vw] max-w-[70px] bg-gradient-to-r from-neutral-950/50 to-neutral-950/0" />
+            <div className="pointer-events-none absolute bottom-0 right-0 top-0 w-[10vw] max-w-[70px] bg-gradient-to-l from-neutral-950/50 to-neutral-950/0" />
         </>
     );
 };
