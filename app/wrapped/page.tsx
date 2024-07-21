@@ -67,7 +67,7 @@ const page = () => {
     };
 
     return (
-        <div className="relative overflow-hidden bg-neutral-950 py-8">
+        <div className="relative overflow-hidden h-[100vh] bg-black py-8">
             <motion.div
                 drag="x"
                 dragConstraints={{
@@ -87,7 +87,7 @@ const page = () => {
                 <Components componentIndex={componentIndex} />
             </motion.div>
 
-            <Dots imgIndex={componentIndex} setImgIndex={componentIndex} />
+            <Dots componentIndex={componentIndex} setcomponentIndex={componentIndex} />
             <GradientEdges />
         </div>
     );
@@ -114,15 +114,15 @@ const Components = ({ componentIndex }: { componentIndex: any }) => {
     );
 };
 
-const Dots = ({ imgIndex, setImgIndex }: { imgIndex: any, setImgIndex: any }) => {
+const Dots = ({ componentIndex, setcomponentIndex }: { componentIndex: any, setcomponentIndex: any }) => {
     return (
         <div className="mt-4 flex w-full justify-center gap-2">
             {components.map((_, idx) => {
                 return (
                     <button
                         key={idx}
-                        onClick={() => setImgIndex(idx)}
-                        className={`h-3 w-3 rounded-full transition-colors ${idx === imgIndex ? "bg-neutral-50" : "bg-neutral-500"
+                        onClick={() => setcomponentIndex(idx)}
+                        className={`h-3 w-3 rounded-full transition-colors ${idx === componentIndex ? "bg-neutral-50" : "bg-neutral-500"
                             }`}
                     />
                 );

@@ -21,8 +21,8 @@ const Features = () => {
                     New songs? Based on your music taste? For you to listen to? Each month?  *impersonates Clay Davis from the Wire* <br /> shiieee----t. </p>
             </div>
             <div className='col-span-1 row-span-1 border-2 bg-orange rounded-xl h-[100%] flex flex-col justify-center items-center font-text group duration-150 p-4'>
-                <h1 className='font-bebas text-3xl 3xl:text-5xl text-center group-hover:text-xl 3xl:group-hover:text-3xl duration-200'>Lana girl,<br /> or a <br />Radiohead boy? </h1>
-                <p className='text-center mt-2 text-xs  group-hover:text-sm 3xl:group-hover:text-base group-hover:font-semibold duration-200'>Discover your unique music personality through the genres that define your listening habits, revealing the soundtrack to your inner vibe. <br /> (chatGPT wrote this)</p>
+                <h1 className='font-bebas text-3xl 3xl:text-5xl text-center group-hover:text-xl 3xl:group-hover:text-3xl duration-200'>Lana girl, or a <br />Radiohead boy? </h1>
+                <p className='text-center mt-2 text-xs  group-hover:text-sm 3xl:group-hover:text-base group-hover:font-semibold duration-200'>Discover your music personality through the genres that define your listening habits, and reveal the soundtrack to your inner vibe. <br /> (chatGPT wrote this)</p>
             </div>
 
 
