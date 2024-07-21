@@ -20,7 +20,7 @@ const SignInPage = () => {
     const handleSignIn = async (providerId: string) => {
         try {
             await signIn(providerId); // Sign in with selected provider
-            router.push('/dashboard'); // Redirect to dashboard or another page after sign-in
+            router.push('/wegotauser'); // Redirect to dashboard or another page after sign-in
         } catch (error) {
             console.error('Sign-in error:', error);
             // Handle sign-in error (e.g., show error message)
