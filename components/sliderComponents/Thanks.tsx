@@ -19,7 +19,7 @@ const Thanks = () => {
                 </div>
 
                 <div className='mt-10 3xl:mt-28'>
-                    <h1 className='font-bebas'><span className='text-[50px]  md:text-[170px] font-black'>Made with love 🖤 </span></h1>
+                    <h1 className='font-bebas'><span className='text-[50px]  md:text-[100px] font-black'>Made with love 🖤 </span></h1>
                 </div>
 
 
