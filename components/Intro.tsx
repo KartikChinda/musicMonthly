@@ -60,34 +60,30 @@ const Intro = () => {
                     Music Monthly
                 </div>
                 {/* container */}
-                {/* on mobile */}
-                <div className='lg:hidden'>
-                    <IntroMobile />
-                </div>
+
 
                 {/* on web */}
-                <div className='hidden lg:block'>
-                    <div className='flex justify-center items-center'>
-                        <div className=' grid grid-cols-10 grid-rows-5 mt-28 w-[80%] h-[100vh] gap-4'>
-                            {/* main content */}
-                            <div className='col-span-7 row-span-3 border-2 border-black rounded-lg'>
-                                <Hero />
-                            </div>
 
-                            {/* photos */}
-                            <div className='col-span-3 row-span-3 rounded-lg'>
-                                <Pictures />
-                            </div>
+                <div className='flex justify-center items-center'>
+                    <div className=' grid grid-cols-10 grid-rows-5 mt-28 w-[80%] h-[130vh] 2xl:h-[105vh] gap-4'>
+                        {/* main content */}
+                        <div className='col-span-7 row-span-3 border-2 border-black rounded-lg'>
+                            <Hero />
+                        </div>
 
-                            {/* Features */}
-                            <div className='col-span-9 row-span-2 rounded-lg'>
-                                <Features />
-                            </div>
+                        {/* photos */}
+                        <div className='col-span-3 row-span-3 rounded-lg'>
+                            <Pictures />
+                        </div>
 
-                            {/* socials */}
-                            <div className='col-span-1 row-span-2 rounded-lg'>
-                                <Socials />
-                            </div>
+                        {/* Features */}
+                        <div className='col-span-9 row-span-2 rounded-lg'>
+                            <Features />
+                        </div>
+
+                        {/* socials */}
+                        <div className='col-span-1 row-span-2 rounded-lg'>
+                            <Socials />
                         </div>
                     </div>
                 </div>

@@ -4,6 +4,7 @@ import Intro from "@/components/Intro";
 import Animator from "@/components/Animator";
 import { signOut } from "next-auth/react";
 import MobileA from "@/components/mobileComponents/MobileA";
+import IntroMobile from "@/components/IntroMobile";
 
 
 export default function Home() {
@@ -13,14 +14,17 @@ export default function Home() {
         Easter egg: Hi
         <button onClick={() => { signOut() }} >SignoutButton</button>
       </div>
-      <div className=" xl:hidden flex justify-center items-center">
+      <div className=" lg:hidden flex flex-col justify-center items-center">
         <MobileA />
+        <IntroMobile />
+
       </div>
-      <div className="hidden xl:block">
+      <div className="hidden lg:block">
         <Hero />
+        <Animator />
+        <Intro />
       </div>
-      <Animator />
-      <Intro />
+
     </main>
   );
 }
