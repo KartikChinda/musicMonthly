@@ -31,7 +31,7 @@ const IntroMobile = () => {
                 <div className='font-bebas text-6xl text-center text-brown mt-10 font-black md:text-[8xl]'>
                     Music Monthly
                 </div>
-                <div className='w-[60vw] p-4 mt-10 flex flex-col gap-6 justify-center items-center'>
+                <div className='w-[90vw] md:w-[60vw] p-4 mt-10 flex flex-col gap-6 justify-center items-center'>
                     <div className='bg-brown h-full flex flex-col gap-4 font-text w-full justify-center items-start px-8 text-orange text-4xl font-extralight rounded-xl p-4'>
                         <h2>Your music recap,</h2>
                         <h1 ><span className='font-extrabold '>"wrapped" </span>and delivered</h1>
