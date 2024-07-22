@@ -5,6 +5,7 @@ import Socials from './gridComponents/Socials';
 import Hero from './gridComponents/Hero';
 import Pictures from './gridComponents/Pictures';
 import Features from './gridComponents/Features';
+import IntroMobile from './IntroMobile';
 
 
 
@@ -44,7 +45,7 @@ const Intro = () => {
 
     return (
         <section className='flex flex-col justify-center items-center'>
-            <div className='h-[40vh] '>
+            <div className='h-[10vh] md:h-[40vh] '>
 
             </div>
             <motion.div
@@ -55,31 +56,43 @@ const Intro = () => {
                 transition={{ duration: 1 }}
             >
 
-                <div className='font-bebas font-bold text-4xl mt-20 md:text-[150px] text-[#1E1305]'>
+                <div className='font-bebas text-center font-bold text-6xl mt-20 md:text-[150px] text-[#1E1305]'>
                     Music Monthly
                 </div>
                 {/* container */}
-                <div className='grid grid-cols-10 grid-rows-5 mt-28 w-[80%] h-[100vh] gap-4'>
-                    {/* main content */}
-                    <div className='col-span-7 row-span-3 border-2 border-black rounded-lg'>
-                        <Hero />
-                    </div>
+                {/* on mobile */}
+                <div className='lg:hidden'>
+                    <IntroMobile />
+                </div>
 
-                    {/* photos */}
-                    <div className='col-span-3 row-span-3 rounded-lg'>
-                        <Pictures />
-                    </div>
+                {/* on web */}
+                <div className='hidden lg:block'>
+                    <div className='flex justify-center items-center'>
+                        <div className=' grid grid-cols-10 grid-rows-5 mt-28 w-[80%] h-[100vh] gap-4'>
+                            {/* main content */}
+                            <div className='col-span-7 row-span-3 border-2 border-black rounded-lg'>
+                                <Hero />
+                            </div>
 
-                    {/* Features */}
-                    <div className='col-span-9 row-span-2 rounded-lg'>
-                        <Features />
-                    </div>
+                            {/* photos */}
+                            <div className='col-span-3 row-span-3 rounded-lg'>
+                                <Pictures />
+                            </div>
 
-                    {/* socials */}
-                    <div className='col-span-1 row-span-2 rounded-lg'>
-                        <Socials />
+                            {/* Features */}
+                            <div className='col-span-9 row-span-2 rounded-lg'>
+                                <Features />
+                            </div>
+
+                            {/* socials */}
+                            <div className='col-span-1 row-span-2 rounded-lg'>
+                                <Socials />
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+
 
             </motion.div>
 

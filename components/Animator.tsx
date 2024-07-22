@@ -37,7 +37,7 @@ const Animator = () => {
     }, []);
     return (
         <div>
-            <div className='h-[40vh] w-full bg-black '>
+            <div className=' h-[20vh] md:h-[40vh] w-full bg-black '>
             </div>
 
             <motion.div ref={ref} className='h-[90vh] m-4 md:m-20 rounded-xl bg-[#EDE0D0] flex justify-center items-center group'
