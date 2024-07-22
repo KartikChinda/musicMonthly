@@ -22,7 +22,7 @@ const MobileA = () => {
             <div className="h-[20vh] w-full flex justify-center items-center bg-gradient-to-b from-[#FF204E] to-[#16FF00]">
             </div>
             <div className='h-[90vh] w-full flex flex-col justify-center gap-10 items-center bg-[#16FF00] font-bebas text-[120px] md:text-[130px] text-[#e900ff] text-center p-4 leading-none'>
-                <div>Want more of it?</div>
+                <div>Want more?</div>
 
             </div>
         </div>

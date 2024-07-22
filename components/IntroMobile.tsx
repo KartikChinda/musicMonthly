@@ -2,6 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 import Pictures from './gridComponents/Pictures';
+import { FaGithubSquare } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import { TiSocialInstagram } from "react-icons/ti";
+
 
 const IntroMobile = () => {
     const { data: session } = useSession();
@@ -27,6 +32,37 @@ const IntroMobile = () => {
             {/* the photos section */}
             <div className='w-full h-[50vh] flex justify-center items-center'>
                 <Pictures />
+            </div>
+            <div>
+                <div className='col-span-1 row-span-1 border-2 bg-brown text-orange rounded-xl h-[100%] flex flex-col justify-center items-center font-text group duration-150 p-2 group'>
+                    <h1 className='font-bebas text-3xl 3xl:text-5xl text-center group-hover:text-xl 3xl:group-hover:text-3xl duration-200'>Certified <br /> bops you <br />listened to.</h1>
+                    <p className='text-center mt-2 text-xs  group-hover:text-sm 3xl:group-hover:text-base group-hover:font-semibold duration-200'>Get a list of bangers you could not stop from pouring through your headphones. The top songs you listened to, curated in one place.</p>
+                </div>
+                <div className='col-span-1 row-span-1 border-2 bg-orange rounded-xl h-[100%] flex flex-col justify-center items-center font-text group duration-150 p-4'>
+                    <h1 className='font-bebas text-3xl 3xl:text-5xl text-center group-hover:text-xl 3xl:group-hover:text-3xl duration-200'>Artists who <br /> spoke to you. <br />And for you.</h1>
+                    <p className='text-center mt-2 text-xs  group-hover:text-sm 3xl:group-hover:text-base group-hover:font-semibold duration-200'>These voices haunted your daydreams, soothed your nightmares. The top artists you listened to each month, served hot.</p>
+                </div>
+                <div className='col-span-1 row-span-1 border-2 bg-brown text-orange rounded-xl h-[100%] flex flex-col justify-center items-center font-text group duration-150 p-4'>
+                    <h1 className='font-bebas text-3xl 3xl:text-5xl text-center group-hover:text-xl 3xl:group-hover:text-3xl duration-200'>Stats, visualized.</h1>
+                    <p className='text-center mt-2 text-xs  group-hover:text-sm 3xl:group-hover:text-base group-hover:font-semibold duration-200'>I'm just going to say it. I like my information served on a visually stunning page. Get your recap designed beautifully. <br /> You flaunt your music, I flaunt my design.</p>
+                </div>
+                <div className='col-span-1 row-span-1 border-2 bg-orange rounded-xl h-[100%] flex flex-col justify-center items-center font-text group duration-150 p-4'>
+                    <h1 className='font-bebas text-3xl 3xl:text-5xl text-center group-hover:text-xl 3xl:group-hover:text-3xl duration-200'>Bangers to <br /> add to your playlists.</h1>
+                    <p className='text-center mt-2 text-xs  group-hover:text-sm 3xl:group-hover:text-base group-hover:font-semibold duration-200'>
+                        New songs? Based on your music taste? For you to listen to? Each month?  *impersonates Clay Davis from the Wire* <br /> shiieee----t. </p>
+                </div>
+                <div className='col-span-1 row-span-1 border-2 bg-brown text-orange rounded-xl h-[100%] flex flex-col justify-center items-center font-text group duration-150 p-4'>
+                    <h1 className='font-bebas text-3xl 3xl:text-5xl text-center group-hover:text-xl 3xl:group-hover:text-3xl duration-200'>Lana girl, or a <br />Radiohead boy? </h1>
+                    <p className='text-center mt-2 text-xs  group-hover:text-sm 3xl:group-hover:text-base group-hover:font-semibold duration-200'>Discover your music personality through the genres that define your listening habits, and reveal the soundtrack to your inner vibe. <br /> (chatGPT wrote this)</p>
+                </div>
+            </div>
+            <div>
+                <div className='w-full h-full bg-brown rounded-xl flex p-4 gap-8 text-orange justify-center items-center text-4xl group duration-150'>
+                    <Link href={"https://github.com/KartikChinda/musicMonthly"} className='hover:text-5xl duration-150'> <FaGithubSquare /></Link>
+                    <Link href={"https://twitter.com/ChindaKartik"} className='hover:text-5xl duration-150'> <FaSquareXTwitter /></Link>
+                    <Link href={"https://www.linkedin.com/in/kartikchinda"} className='hover:text-5xl duration-150'> <FaLinkedin /></Link>
+                    <Link href={"https://www.instagram.com/kartik.chinda11"} className='hover:text-5xl duration-150'> <TiSocialInstagram /></Link>
+                </div>
             </div>
         </div>
     )
