@@ -16,7 +16,6 @@ const page = () => {
         // do we need to fix this?
         if (session?.user) {
             setdisplayConfetti(true)
-
         }
 
 
